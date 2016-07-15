@@ -42,15 +42,18 @@ tree = html.fromstring(r.content)
 #ok
 for tr in tree.xpath('//table[2]/tr'):
     ##print tr
-    for td in tr.xpath('//td[@class="titleLeft"]'):
-        print "============================="
-        print td.text
+    print "==================================="
+    td_name = tr.xpath('//td[@class="titleLeft"]/text()')
+    print td_name
+    #for td in tr.xpath('//td[@class="titleLeft"]'):
+    #    print "============================="
+    #    print td.text
         #for img in td.xpath('//img[@class="paddingLeft16"]'):
         #	print img.text
-        print "============================="
-    	for td in tr.xpath('//td[@class="decimal"]'):
-        	print "*****************************"
-        	print td.text
-        	print "*****************************"
+    #    print "============================="
+    for td in tr.xpath('//td[@class="decimal"]'):
+    	print "*****************************"
+    	print td.text
+    	print "*****************************"
 
 
