@@ -44,7 +44,10 @@ for tr in tree.xpath('//table[2]/tr'):
     ##print tr
     print "==================================="
     td_name = tr.xpath('//td[@class="titleLeft"]/text()')
-    print td_name
+    #print td_name
+    print td_name[0]
+    print td_name[1]
+    print len(td_name)
     #for td in tr.xpath('//td[@class="titleLeft"]'):
     #    print "============================="
     #    print td.text
