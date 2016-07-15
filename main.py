@@ -43,20 +43,19 @@ tree = html.fromstring(r.content)
 for tr in tree.xpath('//table[2]/tr'):
     ##print tr
     print "==================================="
-    td_name = tr.xpath('//td[@class="titleLeft"]/text()')
+    currency_name = tr.xpath('//td[@class="titleLeft"]/text()')
     #print td_name
-    print td_name[0]
-    print td_name[1]
-    print len(td_name)
+    for i in range(0, len(currency_name), 1):
+        print currency_name[i]
     #for td in tr.xpath('//td[@class="titleLeft"]'):
     #    print "============================="
     #    print td.text
         #for img in td.xpath('//img[@class="paddingLeft16"]'):
         #	print img.text
     #    print "============================="
-    for td in tr.xpath('//td[@class="decimal"]'):
-    	print "*****************************"
-    	print td.text
-    	print "*****************************"
+    	for td in tr.xpath('//td[@class="decimal"]'):
+     	    print "*****************************"
+    	    print td.text
+    	    print "*****************************"
 
 
