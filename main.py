@@ -53,9 +53,14 @@ for tr in tree.xpath('//table[2]/tr'):
         #for img in td.xpath('//img[@class="paddingLeft16"]'):
         #	print img.text
     #    print "============================="
-    	for td in tr.xpath('//td[@class="decimal"]'):
-     	    print "*****************************"
-    	    print td.text
-    	    print "*****************************"
+    	currency_value = tr.xpath('//td[@class="decimal"]/text()')
+        print currency_value[i*4]
+        print currency_value[i*4+1]
+        print currency_value[i*4+2]
+        print currency_value[i*4+3]
+    	#for td in tr.xpath('//td[@class="decimal"]'):
+     	#    print "*****************************"
+    	#    print td.text
+    	#    print "*****************************"
 
 
