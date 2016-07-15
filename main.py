@@ -20,9 +20,9 @@ r = requests.get(url)
 #print r.text
 
 #save to file
-#data = open('data.html', 'w')
-#data.write(r.text)
-#data.close()
+data = open('data.html', 'w')
+data.write(r.text)
+data.close()
 
 #Parse Pages
 #tree = html.fromstring(r.text)
@@ -39,6 +39,7 @@ tree = html.fromstring(r.content)
 #for tr in tree.xpath('//table[2]/tr'):
 #ok
 #for tr in tree.xpath('//table[1]/tr'):
+#ok
 for tr in tree.xpath('//table[2]/tr'):
     ##print tr
     for td in tr.xpath('//td[@class="titleLeft"]'):
