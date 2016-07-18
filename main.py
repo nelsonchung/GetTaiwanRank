@@ -5,6 +5,7 @@
 #import library
 import requests
 from lxml import html
+import datetime
 
 #not really fix utf8 problem
 import sys
@@ -39,7 +40,8 @@ tree = html.fromstring(r.content)
 #ok
 #for tr in tree.xpath('//table[1]/tr'):
 #ok
-print "==================================="
+print datetime.datetime.now() 
+print "==============Start====================="
 currency_name = tree.xpath('//table[2]/tr/td[@class="titleLeft"]/text()')
 #print td_name
 for i in range(0, len(currency_name), 1):
@@ -59,5 +61,6 @@ for i in range(0, len(currency_name), 1):
      	#    print "*****************************"
     	#    print td.text
     	#    print "*****************************"
+print "==============End====================="
 
 

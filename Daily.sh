@@ -14,7 +14,6 @@ do
         echo "$NOT_UPDATE_FILE_NAME found. So we don't do update."
     else
         if [ "$HOUR" == "$HOUR_RUN_STOCK" ] && [ "$MINUTE" == "$MINUTE_RUN_STOCK" ]; then
-            date >> ${INFO_FILE}
             python main.py >> ${INFO_FILE}
         fi
     fi
