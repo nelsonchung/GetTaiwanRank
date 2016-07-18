@@ -15,6 +15,8 @@ do
     else
         if [ "$HOUR" == "$HOUR_RUN_STOCK" ] && [ "$MINUTE" == "$MINUTE_RUN_STOCK" ]; then
             python main.py >> ${INFO_FILE}
+            git commit ${INFO_FILE} -m "Daily update."
+            git push
         fi
     fi
     sleep 60
